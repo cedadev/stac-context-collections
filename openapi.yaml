@@ -1,0 +1,38 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "The SpatioTemporal Asset Catalog API - Context Collections",
+    "description" : "Adds collection summary to context response to enable easier route to building dynamic queryables as part of the filter extension.",
+    "version" : "1.0.0-beta.3"
+  },
+  "servers" : [ {
+    "url" : "/"
+  } ],
+  "paths" : { },
+  "components" : {
+    "schemas" : {
+      "itemCollection" : {
+        "type" : "object",
+        "properties" : {
+          "context" : {
+            "$ref" : "#/components/schemas/itemCollection_context"
+          }
+        },
+        "description" : "**Optional Extension:** Context Collections \naugments the response with a summary of the\ncollections for the current search context.",
+        "x-stac-api-fragment" : "context"
+      },
+      "itemCollection_context" : {
+        "required" : [ "collections" ],
+        "type" : "object",
+        "properties" : {
+          "collections" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
