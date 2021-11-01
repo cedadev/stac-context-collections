@@ -20,6 +20,12 @@ This extension is created to alleviate this problem by providing the client with
 
 Building the intersect is an expensive task so it is likely that caching would be important.
 
+Depending on your database backend, you might be able to get a different level of detail back in this response. For elasticsearch, the default number returned in an aggregation is 10, so the `collections` response in the context would be the top 10 collections returned, by count (i.e. top  10 collections with the most items which match your search). This should be sufficient as the more collections you intersect overlapping queryables will tend to 0.
+
+Your implementation my determine what is sufficient for your use case where including more will lead to a more expensive intersect query.
+
+It is recommended to short-circuit the intersect process if the intersect reaches 0.
+
 ## HTTP GET
 
 ### Examples
