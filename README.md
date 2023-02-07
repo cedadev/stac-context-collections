@@ -1,11 +1,15 @@
-# stac-context-collections
+# STAC - Context Collections Extension Specification
 
-|   |   |
-|---|---|
-| **OpenAPI Specification** | [openapi.yaml](openapi.yaml) |
-| **Conformance Class** | https://api.stacspec.org/v1.0.0-beta.3/item-search#context-collections |
-| **[Maturity Classification](https://github.com/radiantearth/stac-api-spec/blob/master/extensions.md#extension-maturity)** | Proposal |
-| **Dependents** | [Item Search](https://github.com/radiantearth/stac-api-spec/tree/master/item-search), [Context Extension](https://github.com/radiantearth/stac-api-spec/tree/master/fragments/context)|
+- **Title:** Context Collections Extension Specification
+- **OpenAPI specification:** [openapi.yaml](openapi.yaml)
+- **Conformance Classes:**
+  - <https://api.stacspec.org/v1.0.0-beta.3/item-search#context-collections>
+- **Scope:** STAC - Core
+- **[Extension Maturity Classification](https://github.com/radiantearth/stac-api-spec/tree/main/README.md#maturity-classification):** Proposal
+- **Dependencies:**
+  - [Item Search](https://github.com/radiantearth/stac-api-spec/tree/master/item-search)
+  - [Context Extension](https://github.com/radiantearth/stac-api-spec/tree/master/fragments/context)
+- **Owner**: @agstephens
   
 This defines a new parameter, `collections` inside the context response which is a summary of all the collections which are part of the current result
 context. i.e. All the collections that apply to the current search results. This is to be used in conjuntion with the [filter extension](https://github.com/radiantearth/stac-api-spec/tree/master/fragments/filter).
