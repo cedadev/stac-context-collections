@@ -1,6 +1,6 @@
-# STAC - Context Collections Extension Specification
+# STAC - Context Collections
 
-- **Title:** Context Collections Extension Specification
+- **Title:** Context Collections
 - **OpenAPI specification:** [openapi.yaml](openapi.yaml)
 - **Conformance Classes:**
   - <https://api.stacspec.org/v1.0.0-beta.3/item-search#context-collections>
